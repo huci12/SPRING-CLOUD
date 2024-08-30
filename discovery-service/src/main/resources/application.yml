@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: discovery-service
+
+server:
+  port: 8761
+
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000 # 기본값은 60000ms (1분)
+  instance:
+    lease-renewal-interval-in-seconds: 30 # 기본값은 30초
+    lease-expiration-duration-in-seconds: 90 # 기본값은 90초
+  client:
+    fetch-registry: false
+    register-with-eureka: false
